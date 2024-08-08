@@ -426,6 +426,15 @@ namespace Assignment2
 
             string[] Arr = { "from", "salt", "earn", " last", "near", "form" };
 
+            var Result = Arr.Select(x => new { x = System.String.Concat(x.Trim().OrderBy(c => c)), word = x.Trim()}).Where(n=>n.x.Length>1).GroupBy(c=> c.x);
+            foreach ( var result in Result)
+            {
+                Console.WriteLine("0000000000000");
+                foreach ( var item in result)
+                {
+                    Console.WriteLine(item.word);
+                }
+            }
             
 
             #endregion
