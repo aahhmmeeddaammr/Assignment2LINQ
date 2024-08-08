@@ -10,6 +10,7 @@ using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Assignment2
 {
+    // لم يتم استخدامه نهائي 
     public class MyCompare: IComparer<string>
     {
         public int Compare(string x, string y)
@@ -424,17 +425,17 @@ namespace Assignment2
 
             #region 3.Use Group By with a custom comparer that matches words that are consists of thesame Characters Together
 
-            string[] Arr = { "from", "salt", "earn", " last", "near", "form" };
+            //string[] Arr = { "from", "salt", "earn", " last", "near", "form" };
 
-            var Result = Arr.Select(x => new { x = System.String.Concat(x.Trim().OrderBy(c => c)), word = x.Trim()}).Where(n=>n.x.Length>1).GroupBy(c=> c.x);
-            foreach ( var result in Result)
-            {
-                Console.WriteLine("0000000000000");
-                foreach ( var item in result)
-                {
-                    Console.WriteLine(item.word);
-                }
-            }
+           // var Result = Arr.Select(x => new { x = System.String.Concat(x.Trim().OrderBy(c => c)), word = x.Trim()}).Where(n=>n.x.Length>1).GroupBy(c=> c.x);
+            // foreach ( var result in Result)
+            // {
+            //     Console.WriteLine("0000000000000");
+            //     foreach ( var item in result)
+            //     {
+            //         Console.WriteLine(item.word);
+            //     }
+            // }
             
 
             #endregion
